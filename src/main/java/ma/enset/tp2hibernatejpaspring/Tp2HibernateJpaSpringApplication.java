@@ -21,11 +21,11 @@ public class Tp2HibernateJpaSpringApplication implements CommandLineRunner{
     @Override
     public void run(String... args) throws Exception {
         //Ajouter des patients
-        patientRepository.save(new Patient(-1, "Hassan", new Date(), false, 4));
-        patientRepository.save(new Patient(-1, "Khalid", new Date(), false, 5));
-        patientRepository.save(new Patient(-1, "Zaid", new Date(), true, 6));
-        patientRepository.save(new Patient(-1, "Younes", new Date(), false, 7));
-        patientRepository.save(new Patient(-1, "Zakaria", new Date(), true, 8));
+//        patientRepository.save(new Patient(-1, "Hassan", new Date(), false, 4));
+//        patientRepository.save(new Patient(-1, "Khalid", new Date(), false, 5));
+//        patientRepository.save(new Patient(-1, "Zaid", new Date(), true, 6));
+//        patientRepository.save(new Patient(-1, "Younes", new Date(), false, 7));
+//        patientRepository.save(new Patient(-1, "Zakaria", new Date(), true, 8));
 
         //Afficher les patients
         List<Patient> patients = patientRepository.findAll();
@@ -45,11 +45,11 @@ public class Tp2HibernateJpaSpringApplication implements CommandLineRunner{
         List<Patient> patients2 = patientRepository.findByNameContains("Z");
 
         //Modifier un patient
-        Patient patient2 = patientRepository.findById(Long.valueOf(3)).get();
+        Patient patient2 = patientRepository.findById(Long.valueOf(5)).get();
         patient2.setName("ZaidModifier");
         patientRepository.save(patient2);
         //Afficher
-        Patient patient3 = patientRepository.findById(Long.valueOf(3)).get();
+        Patient patient3 = patientRepository.findById(Long.valueOf(10)).get();
         System.out.println(patient3.getName());
 
         //Supprimer un patient
