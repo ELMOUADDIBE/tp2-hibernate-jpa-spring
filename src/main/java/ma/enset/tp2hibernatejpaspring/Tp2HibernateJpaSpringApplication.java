@@ -28,31 +28,31 @@ public class Tp2HibernateJpaSpringApplication implements CommandLineRunner{
 //        patientRepository.save(new Patient(-1, "Zakaria", new Date(), true, 8));
 
         //Afficher les patients
-        List<Patient> patients = patientRepository.findAll();
-        patients.forEach(p->{
-            System.out.println(p.toString());
-        });
-
-        //Consulter un patient, exemple id=2
-        Patient patient = patientRepository.findById(Long.valueOf(2)).get();
-        System.out.println("*****");
-        System.out.println(patient.getId());
-        System.out.println(patient.getName());
-        System.out.println(patient.getDateNaissance());
-        System.out.println("*****");
-
-        //Rechercher des patients
-        List<Patient> patients2 = patientRepository.findByNameContains("Z");
-
-        //Modifier un patient
-        Patient patient2 = patientRepository.findById(Long.valueOf(5)).get();
-        patient2.setName("ZaidModifier");
-        patientRepository.save(patient2);
-        //Afficher
-        Patient patient3 = patientRepository.findById(Long.valueOf(10)).get();
-        System.out.println(patient3.getName());
-
-        //Supprimer un patient
-        patientRepository.deleteById(Long.valueOf(3));
+//        List<Patient> patients = patientRepository.findAll();
+//        patients.forEach(p->{
+//            System.out.println(p.toString());
+//        });
+//
+//        //Consulter un patient, exemple id=2
+//        Patient patient = patientRepository.findById(Long.valueOf(2)).get();
+//        System.out.println("*****");
+//        System.out.println(patient.getId());
+//        System.out.println(patient.getName());
+//        System.out.println(patient.getDateNaissance());
+//        System.out.println("*****");
+//
+//        //Rechercher des patients
+//        List<Patient> patients2 = patientRepository.findByNameContains("Z");
+//
+//        //Modifier un patient
+//        Patient patient2 = patientRepository.findById(Long.valueOf(5)).get();
+//        patient2.setName("ZaidModifier");
+//        patientRepository.save(patient2);
+//        //Afficher
+//        Patient patient3 = patientRepository.findById(Long.valueOf(10)).get();
+//        System.out.println(patient3.getName());
+//
+//        //Supprimer un patient
+//        patientRepository.deleteById(Long.valueOf(3));
     }
 }
