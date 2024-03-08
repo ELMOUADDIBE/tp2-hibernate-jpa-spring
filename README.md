@@ -2,6 +2,8 @@
 
 Ce projet Spring Boot, `Tp2HibernateJpaSpringApplication`, illustre une application de gestion de patients simple utilisant Spring Data JPA pour l'interaction avec la base de données. Il montre comment effectuer des opérations CRUD (Créer, Lire, Mettre à jour, Supprimer) sur des entités Patient. Le projet démarre avec une base de données H2 en mémoire avant de migrer vers MySQL.
 
+<img src="src/main/resources/img/db.png" >
+
 ## Configuration de l'Environnement
 
 Assurez-vous que les outils suivants sont installés et configurés sur votre machine :
@@ -20,7 +22,7 @@ Assurez-vous que les outils suivants sont installés et configurés sur votre ma
    ```
 
 ## Fonctionnalités
-- Ajouter des patients : La méthode run contient des exemples commentés pour ajouter des patients à la base de données.
+- Ajouter des patients, medecins, rendez-vous et consultations.
 - Consulter tous les patients : Après l'ajout, l'application affiche tous les patients présents dans la base de données.
 - Consulter, rechercher, modifier et supprimer des patients : La méthode run illustre également comment effectuer ces opérations.
    
